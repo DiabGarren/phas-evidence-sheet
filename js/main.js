@@ -1,5 +1,3 @@
-import { getGhosts, evidences } from "./utils.js";
-
 const ghosts = [
     {
         "name": "Spirit",
@@ -98,6 +96,15 @@ const ghosts = [
         "evidence": ["Ghost Writing", "D.O.T.S.", "Ghost Orbs"]
     }
 ];
+const evidences = [
+    "EMF Level 5",
+    "Ultraviolet",
+    "Ghost Writing",
+    "Freezing",
+    "D.O.T.S.",
+    "Ghost Orbs",
+    "Spirit Box",
+];
 
 let ghostList = [];
 let evidenceList = [];
@@ -143,7 +150,7 @@ document.querySelectorAll(".chk-evidence").forEach((eSelector) => {
             default:
                 eSelector.children[0].setAttribute(
                     "src",
-                    "./assets/images/checkbox.svg"
+                    "/phas-evidence-sheet/assets/images/checkbox.svg"
                 );
                 eSelector.dataset.state = "open";
                 break;
