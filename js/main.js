@@ -110,7 +110,7 @@ let ghostList = [];
 let evidenceList = [];
 
 evidences.forEach((evidence) => {
-    const evidenceType = `<button class="chk-evidence" id="${evidence}" data-state="open"><img src="/assets/images/checkbox.svg"/>${evidence}</button>`;
+    const evidenceType = `<button class="chk-evidence" id="${evidence}" data-state="open"><img src="../assets/images/checkbox.svg"/>${evidence}</button>`;
     document.querySelector(".evidence-list").innerHTML += evidenceType;
 
     evidenceList.push({
@@ -135,14 +135,14 @@ document.querySelectorAll(".chk-evidence").forEach((eSelector) => {
             case "open":
                 eSelector.children[0].setAttribute(
                     "src",
-                    "/assets/images/checkboxYes.svg"
+                    "../assets/images/checkboxYes.svg"
                 );
                 eSelector.dataset.state = "yes";
                 break;
             case "yes":
                 eSelector.children[0].setAttribute(
                     "src",
-                    "/assets/images/checkboxNo.svg"
+                    "../assets/images/checkboxNo.svg"
                 );
                 eSelector.dataset.state = "no";
                 break;
@@ -150,7 +150,7 @@ document.querySelectorAll(".chk-evidence").forEach((eSelector) => {
             default:
                 eSelector.children[0].setAttribute(
                     "src",
-                    "/assets/images/checkbox.svg"
+                    "../assets/images/checkbox.svg"
                 );
                 eSelector.dataset.state = "open";
                 break;
