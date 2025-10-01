@@ -125,7 +125,7 @@ ghosts.forEach((ghost) => {
     ghostList.push({
         name: ghost.name,
         evidence: ghost.evidence,
-        acitve: "open",
+        active: "open",
     });
 });
 
@@ -171,7 +171,7 @@ document.querySelectorAll(".chk-evidence").forEach((eSelector) => {
                     evidence.active == "open"
                 ) {
                     gSelector.classList.remove("ghost-no");
-                    ghost.acitve = "open";
+                    ghost.active = "open";
                     return false;
                 }
                 if (
@@ -180,7 +180,7 @@ document.querySelectorAll(".chk-evidence").forEach((eSelector) => {
                     evidence.active == "open"
                 ) {
                     gSelector.classList.remove("ghost-no");
-                    ghost.acitve = "open";
+                    ghost.active = "open";
                     return false;
                 }
                 if (
@@ -188,7 +188,7 @@ document.querySelectorAll(".chk-evidence").forEach((eSelector) => {
                     evidence.active == "yes"
                 ) {
                     gSelector.classList.add("ghost-no");
-                    ghost.acitve = "no";
+                    ghost.active = "no";
                     return true;
                 }
                 if (
@@ -196,10 +196,59 @@ document.querySelectorAll(".chk-evidence").forEach((eSelector) => {
                     evidence.active == "no"
                 ) {
                     gSelector.classList.add("ghost-no");
-                    ghost.acitve = "no";
+                    ghost.active = "no";
                     return true;
                 }
             });
         });
+
+        let openEvidence = [];
+        ghostList.forEach((ghost) => {
+            if (ghost.active == "open") {
+                ghost.evidence.forEach((e) => {
+                    if (!openEvidence.includes(e)) openEvidence.push(e);
+                });
+            }
+        });
+        console.log(openEvidence);
+        document.querySelectorAll(".chk-evidence").forEach((evSelector) => {
+            const checkbox = evSelector.children[0].attributes[0].value;
+            console.log(checkbox);
+
+            if (
+                !openEvidence.includes(evSelector.id) &&
+                evSelector.dataset.state != "no"
+            ) {
+                evSelector.setAttribute("disabled", "");
+                evSelector.children[0].setAttribute(
+                    "src",
+                    "./assets/images/checkboxLock.svg"
+                );
+            } else {
+                evSelector.removeAttribute("disabled");
+                if (checkbox == "./assets/images/checkboxLock.svg") {
+                    evSelector.children[0].setAttribute(
+                        "src",
+                        "./assets/images/checkbox.svg"
+                    );
+                } else {
+                    evSelector.children[0].setAttribute("src", checkbox);
+                }
+            }
+        });
+    });
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+    evidenceList.forEach((evidence, index) => {
+        evidenceList[index].active = "open";
+        document
+            .getElementById(evidence.name)
+            .children[0].setAttribute("src", "./assets/images/checkbox.svg");
+        document.getElementById(evidence.name).dataset.state = "open";
+    });
+    ghostList.forEach((ghost, index) => {
+        ghostList[index].active = "open";
+        document.getElementById(ghost.name).classList.remove("ghost-no");
     });
 });
