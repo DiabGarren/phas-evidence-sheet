@@ -1,21 +1,21 @@
-.ghost-list,
 .evidence-list {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-.evidence-list {
-    flex-direction: column;
     max-height: 170px;
 }
 
 .ghost-list {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
-.lbl-ghost {
-    /* background-color: blue; */
+.ghost-list h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .chk-evidence {
@@ -31,5 +31,5 @@
 }
 
 .lbl-ghost.ghost-no {
-    background-color: black;
+    display: none;
 }

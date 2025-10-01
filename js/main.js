@@ -119,7 +119,12 @@ evidences.forEach((evidence) => {
     });
 });
 ghosts.forEach((ghost) => {
-    const ghostType = `<p class="lbl-ghost" id="${ghost.name}">${ghost.name}</p>`;
+    const ghostType = `<div class="lbl-ghost" id="${ghost.name}">
+    <h2>${ghost.name}</h2>
+    <div>
+       
+    </div>
+    </div>`;
     document.querySelector(".ghost-list").innerHTML += ghostType;
 
     ghostList.push({
@@ -246,6 +251,7 @@ document.getElementById("reset").addEventListener("click", () => {
             .getElementById(evidence.name)
             .children[0].setAttribute("src", "./assets/images/checkbox.svg");
         document.getElementById(evidence.name).dataset.state = "open";
+        document.getElementById(evidence.name).removeAttribute("disabled");
     });
     ghostList.forEach((ghost, index) => {
         ghostList[index].active = "open";
