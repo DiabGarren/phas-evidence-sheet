@@ -1,0 +1,35 @@
+.ghost-list,
+.evidence-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.evidence-list {
+    flex-direction: column;
+    max-height: 170px;
+}
+
+.ghost-list {
+    flex-direction: row;
+}
+
+.lbl-ghost {
+    /* background-color: blue; */
+}
+
+.chk-evidence {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.chk-evidence img {
+    width: 30px;
+}
+
+.lbl-ghost.ghost-no {
+    background-color: black;
+}
