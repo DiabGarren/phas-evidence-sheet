@@ -1,6 +1,103 @@
 import { getGhosts, evidences } from "./utils.js";
 
-const ghosts = await getGhosts();
+const ghosts = [
+    {
+        "name": "Spirit",
+        "evidence": ["EMF Level 5", "Ghost Writing", "Spirit Box"]
+    },
+    {
+        "name": "Wraith",
+        "evidence": ["EMF Level 5", "D.O.T.S.", "Spirit Box"]
+    },
+    {
+        "name": "Phantom",
+        "evidence": ["Ultraviolet", "D.O.T.S.", "Spirit Box"]
+    },
+    {
+        "name": "Poltergeist",
+        "evidence": ["Ultraviolet", "Ghost Writing", "Spirit Box"]
+    },
+    {
+        "name": "Banshee",
+        "evidence": ["Ultraviolet", "D.O.T.S.", "Ghost Orbs"]
+    },
+    {
+        "name": "Jinn",
+        "evidence": ["EMF Level 5", "Ultraviolet", "Freezing"]
+    },
+    {
+        "name": "Mare",
+        "evidence": ["Ghost Writing", "Ghost Orbs", "Spirit Box"]
+    },
+    {
+        "name": "Revenant",
+        "evidence": ["Freezing", "Ghost Writing", "Ghost Orbs"]
+    },
+    {
+        "name": "Shade",
+        "evidence": ["EMF Level 5", "Ghost Writing", "Freezing"]
+    },
+    {
+        "name": "Demon",
+        "evidence": ["Ultraviolet", "Ghost Writing", "Freezing"]
+    },
+    {
+        "name": "Yurei",
+        "evidence": ["Freezing", "D.O.T.S.", "Ghost Orbs"]
+    },
+    {
+        "name": "Oni",
+        "evidence": ["EMF Level 5", "Freezing", "D.O.T.S."]
+    },
+    {
+        "name": "Yokai",
+        "evidence": ["D.O.T.S.", "Ghost Orbs", "Spirit Box"]
+    },
+    {
+        "name": "Hantu",
+        "evidence": ["Ultraviolet", "Freezing", "Ghost Orbs"]
+    },
+    {
+        "name": "Goryo",
+        "evidence": ["EMF Level 5", "Ultraviolet", "D.O.T.S."]
+    },
+    {
+        "name": "Myling",
+        "evidence": ["EMF Level 5", "Ultraviolet", "Ghost Writing"]
+    },
+    {
+        "name": "Onryo",
+        "evidence": ["Freezing", "Ghost Orbs", "Spirit Box"]
+    },
+    {
+        "name": "The Twins",
+        "evidence": ["EMF Level 5", "Freezing", "Spirit Box"]
+    },
+    {
+        "name": "Raiju",
+        "evidence": ["EMF Level 5", "D.O.T.S.", "Ghost Orbs"]
+    },
+    {
+        "name": "Obake",
+        "evidence": ["EMF Level 5", "Ultraviolet", "Ghost Orbs"]
+    },
+    {
+        "name": "The Mimic",
+        "evidence": ["Ultraviolet", "Freezing", "Ghost Orbs", "Spirit Box"]
+    },
+    {
+        "name": "Moroi",
+        "evidence": ["Ghost Writing", "Freezing", "Spirit Box"]
+    },
+    {
+        "name": "Deogen",
+        "evidence": ["Ghost Writing", "D.O.T.S.", "Spirit Box"]
+    },
+    {
+        "name": "Thaye",
+        "evidence": ["Ghost Writing", "D.O.T.S.", "Ghost Orbs"]
+    }
+];
 
 let ghostList = [];
 let evidenceList = [];
