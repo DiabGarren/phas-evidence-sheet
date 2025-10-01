@@ -150,7 +150,7 @@ document.querySelectorAll(".chk-evidence").forEach((eSelector) => {
             default:
                 eSelector.children[0].setAttribute(
                     "src",
-                    "/phas-evidence-sheet/assets/images/checkbox.svg"
+                    "./phas-evidence-sheet/assets/images/checkbox.svg"
                 );
                 eSelector.dataset.state = "open";
                 break;
