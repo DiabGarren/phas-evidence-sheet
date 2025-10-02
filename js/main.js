@@ -81,7 +81,7 @@ const ghosts = [
     },
     {
         name: "The Mimic",
-        evidence: ["Ultraviolet", "Freezing", "Ghost Orbs", "Spirit Box"],
+        evidence: ["Ultraviolet", "Freezing", "Spirit Box", "Ghost Orbs"],
     },
     {
         name: "Moroi",
