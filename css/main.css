@@ -1,15 +1,24 @@
+body {
+    background-color: #c7c5a8;
+}
 .evidence-list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
-    max-height: 170px;
+    max-height: 250px;
+}
+
+hr {
+    color: #bfbc9b;
+    border-color: #bfbc9b;
 }
 
 .ghost-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 10px;
+    align-items: center;
 }
 
 .ghost-list h2 {
@@ -23,7 +32,6 @@
     border: none;
     cursor: pointer;
     display: flex;
-    align-items: center;
 }
 
 .chk-evidence img {
@@ -32,4 +40,46 @@
 
 .lbl-ghost.ghost-no {
     display: none;
+}
+
+.lbl-ghost .ghost-evidence {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+}
+
+.ghost-evidence p:nth-child(1) {
+    text-align: right;
+}
+.ghost-evidence p:nth-child(2) {
+    text-align: center;
+    border-inline: 2px solid black;
+    margin-inline: 7px;
+}
+.ghost-evidence p:nth-child(3) {
+    text-align: left;
+}
+
+.evidence-emf-level-5 {
+    color: rgb(221, 13, 13);
+}
+.evidence-ultraviolet {
+    color: rgb(88, 6, 221);
+}
+.evidence-ghost-writing {
+    color: rgb(107, 59, 0);
+}
+.evidence-freezing {
+    color: rgb(30, 218, 252);
+}
+.evidence-freezing {
+    color: rgb(0, 113, 133);
+}
+.evidence-dots {
+    color: rgb(14, 150, 32);
+}
+.evidence-ghost-orbs {
+    color: rgb(87, 87, 87);
+}
+.evidence-spirit-box {
+    color: rgb(136, 134, 2);
 }

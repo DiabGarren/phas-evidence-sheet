@@ -110,7 +110,10 @@ let ghostList = [];
 let evidenceList = [];
 
 evidences.forEach((evidence) => {
-    const evidenceType = `<button class="chk-evidence" id="${evidence}" data-state="open"><img src="./assets/images/checkbox.svg"/>${evidence}</button>`;
+    const evidenceType = `<button class="chk-evidence evidence-${evidence
+        .replaceAll(" ", "-")
+        .replaceAll(".", "")
+        .toLowerCase()}" id="${evidence}" data-state="open"><img src="./assets/images/checkbox.svg"/><p>${evidence}</p></button>`;
     document.querySelector(".evidence-list").innerHTML += evidenceType;
 
     evidenceList.push({
@@ -121,8 +124,19 @@ evidences.forEach((evidence) => {
 ghosts.forEach((ghost) => {
     const ghostType = `<div class="lbl-ghost" id="${ghost.name}">
     <h2>${ghost.name}</h2>
-    <div>
-       
+    <div class="ghost-evidence">
+       <p class="evidence-${ghost.evidence[0]
+           .replaceAll(" ", "-")
+           .replaceAll(".", "")
+           .toLowerCase()}">${ghost.evidence[0]}</p>
+       <p class="evidence-${ghost.evidence[1]
+           .replaceAll(" ", "-")
+           .replaceAll(".", "")
+           .toLowerCase()}">${ghost.evidence[1]}</p>
+       <p class="evidence-${ghost.evidence[2]
+           .replaceAll(" ", "-")
+           .replaceAll(".", "")
+           .toLowerCase()}">${ghost.evidence[2]}</p>
     </div>
     </div>`;
     document.querySelector(".ghost-list").innerHTML += ghostType;
@@ -215,10 +229,8 @@ document.querySelectorAll(".chk-evidence").forEach((eSelector) => {
                 });
             }
         });
-        console.log(openEvidence);
         document.querySelectorAll(".chk-evidence").forEach((evSelector) => {
             const checkbox = evSelector.children[0].attributes[0].value;
-            console.log(checkbox);
 
             if (
                 !openEvidence.includes(evSelector.id) &&
