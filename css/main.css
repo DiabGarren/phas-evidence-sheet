@@ -1,30 +1,35 @@
-body {
-    background-color: #c7c5a8;
+::-webkit-scrollbar {
+    width: 10px;
 }
+::-webkit-scrollbar-thumb {
+    background: #807d68;
+    border-radius: 5px;
+}
+
+body {
+    background-color: #e0d9b8;
+    background-image: url("../assets/images/grid.svg");
+    background-size: 50px 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    border-block: 2px solid black;
+    margin-inline: 2px;
+}
+
 .evidence-list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 10px;
-    max-height: 250px;
-}
-
-hr {
-    color: #bfbc9b;
-    border-color: #bfbc9b;
-}
-
-.ghost-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-.ghost-list h2 {
-    display: block;
-    width: 100%;
-    text-align: center;
+    height: 175px;
+    margin: 15px auto;
+    gap: 0 35px;
 }
 
 .chk-evidence {
@@ -38,13 +43,37 @@ hr {
     width: 30px;
 }
 
+.ghost-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid black;
+    max-height: 366px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ghost-list h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 15px 0 5px;
+}
+
+.lbl-ghost {
+    border-block: 1px solid black;
+    height: 120px;
+    flex-shrink: 0;
+}
+
 .lbl-ghost.ghost-no {
     display: none;
 }
 
 .lbl-ghost .ghost-evidence {
     display: grid;
-    grid-template-columns: repeat(3, 120px);
+    grid-template-columns: repeat(3, 95px);
+    align-items: center;
 }
 
 .ghost-evidence p:nth-child(1) {
@@ -82,4 +111,39 @@ hr {
 }
 .evidence-spirit-box {
     color: rgb(136, 134, 2);
+}
+
+#reset {
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 5px;
+    display: block;
+}
+
+@media only screen and (min-width: 375px) {
+    .lbl-ghost .ghost-evidence {
+        display: grid;
+        grid-template-columns: repeat(3, 120px);
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .main {
+        flex-direction: row;
+        justify-self: center;
+    }
+
+    .evidence-list {
+        height: fit-content;
+        margin-inline: 15px;
+        border-right: 2px solid black;
+    }
+
+    .ghost-list {
+        height: 300px;
+        border: none;
+        margin-block: 15px;
+    }
 }
