@@ -27,9 +27,10 @@ h1 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 175px;
+    height: 210px;
     margin: 15px auto;
-    gap: 0 35px;
+    width: 100%;
+    max-width: 275px;
 }
 
 .chk-evidence {
@@ -40,7 +41,11 @@ h1 {
 }
 
 .chk-evidence img {
-    width: 30px;
+    width: 35px;
+}
+.chk-evidence p {
+    display: block;
+    font-size: 16px;
 }
 
 .ghost-list {
@@ -72,8 +77,12 @@ h1 {
 
 .lbl-ghost .ghost-evidence {
     display: grid;
-    grid-template-columns: repeat(3, 95px);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    font-weight: 600;
+}
+.ghost-evidence p {
+    padding-inline: 7px;
 }
 
 .ghost-evidence p:nth-child(1) {
@@ -82,7 +91,6 @@ h1 {
 .ghost-evidence p:nth-child(2) {
     text-align: center;
     border-inline: 2px solid black;
-    margin-inline: 7px;
 }
 .ghost-evidence p:nth-child(3) {
     text-align: left;
@@ -136,13 +144,12 @@ h1 {
     }
 
     .evidence-list {
-        height: fit-content;
-        margin-inline: 15px;
+        margin-inline: 10px;
         border-right: 2px solid black;
     }
 
     .ghost-list {
-        height: 300px;
+        height: 210px;
         border: none;
         margin-block: 15px;
     }
