@@ -1,101 +1,114 @@
 const ghosts = [
     {
-        name: "Spirit",
-        evidence: ["EMF Level 5", "Ghost Writing", "Spirit Box"],
+        "name": "Banshee",
+        "evidence": ["Ultraviolet", "D.O.T.S.", "Ghost Orbs"]
     },
     {
-        name: "Wraith",
-        evidence: ["EMF Level 5", "D.O.T.S.", "Spirit Box"],
+        "name": "Dayan",
+        "evidence": ["EMF Level 5", "Ghost Orbs", "Spirit Box"]
     },
     {
-        name: "Phantom",
-        evidence: ["Ultraviolet", "D.O.T.S.", "Spirit Box"],
+        "name": "Deogen",
+        "evidence": ["Ghost Writing", "D.O.T.S.", "Spirit Box"]
     },
     {
-        name: "Poltergeist",
-        evidence: ["Ultraviolet", "Ghost Writing", "Spirit Box"],
+        "name": "Demon",
+        "evidence": ["Ultraviolet", "Ghost Writing", "Freezing"]
     },
     {
-        name: "Banshee",
-        evidence: ["Ultraviolet", "D.O.T.S.", "Ghost Orbs"],
+        "name": "Gallu",
+        "evidence": ["EMF Level 5", "Ultraviolet", "Spirit Box"]
     },
     {
-        name: "Jinn",
-        evidence: ["EMF Level 5", "Ultraviolet", "Freezing"],
+        "name": "Goryo",
+        "evidence": ["EMF Level 5", "Ultraviolet", "D.O.T.S."]
     },
     {
-        name: "Mare",
-        evidence: ["Ghost Writing", "Ghost Orbs", "Spirit Box"],
+        "name": "Hantu",
+        "evidence": ["Ultraviolet", "Freezing", "Ghost Orbs"]
     },
     {
-        name: "Revenant",
-        evidence: ["Freezing", "Ghost Writing", "Ghost Orbs"],
+        "name": "Jinn",
+        "evidence": ["EMF Level 5", "Ultraviolet", "Freezing"]
     },
     {
-        name: "Shade",
-        evidence: ["EMF Level 5", "Ghost Writing", "Freezing"],
+        "name": "Mare",
+        "evidence": ["Ghost Writing", "Ghost Orbs", "Spirit Box"]
     },
     {
-        name: "Demon",
-        evidence: ["Ultraviolet", "Ghost Writing", "Freezing"],
+        "name": "Moroi",
+        "evidence": ["Ghost Writing", "Freezing", "Spirit Box"]
     },
     {
-        name: "Yurei",
-        evidence: ["Freezing", "D.O.T.S.", "Ghost Orbs"],
+        "name": "Myling",
+        "evidence": ["EMF Level 5", "Ultraviolet", "Ghost Writing"]
     },
     {
-        name: "Oni",
-        evidence: ["EMF Level 5", "Freezing", "D.O.T.S."],
+        "name": "Obake",
+        "evidence": ["EMF Level 5", "Ultraviolet", "Ghost Orbs"]
     },
     {
-        name: "Yokai",
-        evidence: ["D.O.T.S.", "Ghost Orbs", "Spirit Box"],
+        "name": "Obambo",
+        "evidence": ["Ghost Writing", "Ultraviolet", "D.O.T.S."]
     },
     {
-        name: "Hantu",
-        evidence: ["Ultraviolet", "Freezing", "Ghost Orbs"],
+        "name": "Oni",
+        "evidence": ["EMF Level 5", "Freezing", "D.O.T.S."]
     },
     {
-        name: "Goryo",
-        evidence: ["EMF Level 5", "Ultraviolet", "D.O.T.S."],
+        "name": "Onryo",
+        "evidence": ["Freezing", "Ghost Orbs", "Spirit Box"]
     },
     {
-        name: "Myling",
-        evidence: ["EMF Level 5", "Ultraviolet", "Ghost Writing"],
+        "name": "Phantom",
+        "evidence": ["Ultraviolet", "D.O.T.S.", "Spirit Box"]
     },
     {
-        name: "Onryo",
-        evidence: ["Freezing", "Ghost Orbs", "Spirit Box"],
+        "name": "Poltergeist",
+        "evidence": ["Ultraviolet", "Ghost Writing", "Spirit Box"]
     },
     {
-        name: "The Twins",
-        evidence: ["EMF Level 5", "Freezing", "Spirit Box"],
+        "name": "Raiju",
+        "evidence": ["EMF Level 5", "D.O.T.S.", "Ghost Orbs"]
     },
     {
-        name: "Raiju",
-        evidence: ["EMF Level 5", "D.O.T.S.", "Ghost Orbs"],
+        "name": "Revenant",
+        "evidence": ["Freezing", "Ghost Writing", "Ghost Orbs"]
     },
     {
-        name: "Obake",
-        evidence: ["EMF Level 5", "Ultraviolet", "Ghost Orbs"],
+        "name": "Shade",
+        "evidence": ["EMF Level 5", "Ghost Writing", "Freezing"]
     },
     {
-        name: "The Mimic",
-        evidence: ["Ultraviolet", "Freezing", "Spirit Box", "Ghost Orbs"],
+        "name": "Spirit",
+        "evidence": ["EMF Level 5", "Ghost Writing", "Spirit Box"]
     },
     {
-        name: "Moroi",
-        evidence: ["Ghost Writing", "Freezing", "Spirit Box"],
+        "name": "Thaye",
+        "evidence": ["Ghost Writing", "D.O.T.S.", "Ghost Orbs"]
     },
     {
-        name: "Deogen",
-        evidence: ["Ghost Writing", "D.O.T.S.", "Spirit Box"],
+        "name": "The Mimic",
+        "evidence": ["Ultraviolet", "Freezing", "Ghost Orbs", "Spirit Box"]
     },
     {
-        name: "Thaye",
-        evidence: ["Ghost Writing", "D.O.T.S.", "Ghost Orbs"],
+        "name": "The Twins",
+        "evidence": ["EMF Level 5", "Freezing", "Spirit Box"]
     },
-];
+    {
+        "name": "Wraith",
+        "evidence": ["EMF Level 5", "D.O.T.S.", "Spirit Box"]
+    },
+    {
+        "name": "Yokai",
+        "evidence": ["D.O.T.S.", "Ghost Orbs", "Spirit Box"]
+    },
+    {
+        "name": "Yurei",
+        "evidence": ["Freezing", "D.O.T.S.", "Ghost Orbs"]
+    }
+]
+;
 const evidences = [
     "EMF Level 5",
     "Ultraviolet",
