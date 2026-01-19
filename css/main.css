@@ -38,6 +38,7 @@ h1 {
     border: none;
     cursor: pointer;
     display: flex;
+    touch-action: none;
 }
 
 .chk-evidence img {
